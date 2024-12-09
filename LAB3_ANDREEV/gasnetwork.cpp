@@ -82,6 +82,7 @@ void connectStations(map<int, pipe>& Pipes, GasNetwork& network, map<int, cs>& C
 
     cout << "Enter start CS ID: ";
     getline(cin, startCS);
+    logMessage(startCS);
     if (!isInteger(startCS) || !isValidCS(Css, stoi(startCS))) {
         cout << "Invalid start CS ID. Please enter a valid ID.\n";
         return;
@@ -89,6 +90,7 @@ void connectStations(map<int, pipe>& Pipes, GasNetwork& network, map<int, cs>& C
 
     cout << "Enter end CS ID: ";
     getline(cin, endCS);
+    logMessage(endCS);
     if (!isInteger(endCS) || !isValidCS(Css, stoi(endCS))) {
         cout << "Invalid end CS ID. Please enter a valid ID.\n";
         return;
@@ -96,6 +98,7 @@ void connectStations(map<int, pipe>& Pipes, GasNetwork& network, map<int, cs>& C
 
     cout << "Enter pipe diameter: ";
     getline(cin, diameter);
+    logMessage(diameter);
     if (!isInteger(diameter) || stoi(diameter) <= 0) {
         cout << "Invalid pipe diameter. Please enter a valid positive number.\n";
         return;
